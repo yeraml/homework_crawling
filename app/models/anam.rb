@@ -1,0 +1,2 @@
+class Anam < ApplicationRecord
+end

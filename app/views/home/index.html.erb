@@ -1,0 +1,71 @@
+<div class="container">
+<h1 class="text-center mt-5">안암학사 식단표</h1>
+<a href="get_bob" style="float:right"><button type="button" class="btn btn-primary">식단표 가져오기</button></a>
+
+<% if @mon %>
+  <h2>기간: <%= @mon.date %>~<%= @sat.date %> </h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>조식A</th>
+        <th>조식B</th>
+        <th>점심</th>
+        <th>점심</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">월(<%= @mon.date %>)</th>
+          <td><%= @mon.breakfast_a %></td>
+          <td><%= @mon.breakfast_b %></td>
+          <td><%= @mon.lunch %></td>
+          <td><%= @mon.dinner %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">화(<%= @tue.date %>)</th>
+          <td><%= @tue.breakfast_a %></td>
+          <td><%= @tue.breakfast_b %></td>
+          <td><%= @tue.lunch %></td>
+          <td><%= @tue.dinner %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">수(<%= @wed.date %>)</th>
+          <td><%= @wed.breakfast_a %></td>
+          <td><%= @wed.breakfast_b %></td>
+          <td><%= @wed.lunch %></td>
+          <td><%= @wed.dinner %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">목(<%= @thu.date %>)</th>
+          <td><%= @thu.breakfast_a %></td>
+          <td><%= @thu.breakfast_b %></td>
+          <td><%= @thu.lunch %></td>
+          <td><%= @thu.dinner %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">금(<%= @fri.date %>)</th>
+          <td><%= @fri.breakfast_a %></td>
+          <td>없음</td>
+          <td><%= @fri.lunch %></td>
+          <td><%= @fri.dinner %></td>
+      </tr>
+
+      <tr>
+        <th scope="row">토(<%= @sat.date %>)</th>
+          <td><%= @sat.breakfast_a %></td>
+          <td>없음</td>
+          <td><%= @sat.lunch %></td>
+          <td><%= @sat.dinner %></td>
+      </tr>
+
+    </tbody>
+  </table>
+<% end %>
+</div>
